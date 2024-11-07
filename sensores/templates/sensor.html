@@ -1,0 +1,21 @@
+<h1>Sensor Data</h1>
+<table>
+    <tr>
+        <th>Timestamp</th>
+        <th>Temperature (DHT11)</th>
+        <th>Humidity</th>
+        <th>Temperature (BMP180)</th>
+        <th>Pressure</th>
+        <th>Light Level</th>
+    </tr>
+    {% for entry in data %}
+    <tr>
+        <td>{{ entry.timestamp }}</td>
+        <td>{{ entry.temperature_dht }}</td>
+        <td>{{ entry.humidity }}</td>
+        <td>{{ entry.temperature_bmp }}</td>
+        <td>{{ entry.pressure }}</td>
+        <td>{{ entry.light_level }}</td>
+    </tr>
+    {% endfor %}
+</table>
